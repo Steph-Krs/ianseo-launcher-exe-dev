@@ -63,90 +63,117 @@ namespace IANSEO_Launcher.Properties {
         /// <summary>
         ///   Recherche une chaîne localisée semblable à Close IANSEO.
         /// </summary>
-        public static string BtnClose {
+        public static string btnClose {
             get {
-                return ResourceManager.GetString("BtnClose", resourceCulture);
+                return ResourceManager.GetString("btnClose", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Recherche une chaîne localisée semblable à 🔗 Copy.
         /// </summary>
-        public static string BtnCopyLink {
+        public static string btnCopyLink {
             get {
-                return ResourceManager.GetString("BtnCopyLink", resourceCulture);
+                return ResourceManager.GetString("btnCopyLink", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à 🔄️ Run IANSEO at every startup.
+        /// </summary>
+        public static string btnEnableStartup {
+            get {
+                return ResourceManager.GetString("btnEnableStartup", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Recherche une chaîne localisée semblable à Open XAMPP Control.
         /// </summary>
-        public static string BtnOpenXamppControl {
+        public static string btnOpenXamppControl {
             get {
-                return ResourceManager.GetString("BtnOpenXamppControl", resourceCulture);
+                return ResourceManager.GetString("btnOpenXamppControl", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à 🧰 Repair MySQL.
+        /// </summary>
+        public static string btnRepairMySQL {
+            get {
+                return ResourceManager.GetString("btnRepairMySQL", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à 🛡️ Open as administrator.
+        /// </summary>
+        public static string btnRunAsAdmin {
+            get {
+                return ResourceManager.GetString("btnRunAsAdmin", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Recherche une chaîne localisée semblable à 📸 QR-Code.
         /// </summary>
-        public static string BtnShowQR {
+        public static string btnShowQR {
             get {
-                return ResourceManager.GetString("BtnShowQR", resourceCulture);
+                return ResourceManager.GetString("btnShowQR", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Recherche une chaîne localisée semblable à 🌐 Open IANSEO.
         /// </summary>
-        public static string BtnStartOpen_Open {
+        public static string btnStartOpen_Open {
             get {
-                return ResourceManager.GetString("BtnStartOpen_Open", resourceCulture);
+                return ResourceManager.GetString("btnStartOpen_Open", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Recherche une chaîne localisée semblable à ▶️ Start IANSEO.
         /// </summary>
-        public static string BtnStartOpen_Run {
+        public static string btnStartOpen_Run {
             get {
-                return ResourceManager.GetString("BtnStartOpen_Run", resourceCulture);
+                return ResourceManager.GetString("btnStartOpen_Run", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Recherche une chaîne localisée semblable à ⏳ Starting....
         /// </summary>
-        public static string BtnStartOpen_Starting {
+        public static string btnStartOpen_Starting {
             get {
-                return ResourceManager.GetString("BtnStartOpen_Starting", resourceCulture);
+                return ResourceManager.GetString("btnStartOpen_Starting", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Recherche une chaîne localisée semblable à ⏸️ Stop IANSEO.
         /// </summary>
-        public static string BtnStop {
+        public static string btnStop {
             get {
-                return ResourceManager.GetString("BtnStop", resourceCulture);
+                return ResourceManager.GetString("btnStop", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Recherche une chaîne localisée semblable à ⏳ Stopping....
         /// </summary>
-        public static string BtnStop_Stopping {
+        public static string btnStop_Stopping {
             get {
-                return ResourceManager.GetString("BtnStop_Stopping", resourceCulture);
+                return ResourceManager.GetString("btnStop_Stopping", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à Copied.
+        ///   Recherche une chaîne localisée semblable à 🛡️ Limit Windows problems.
         /// </summary>
-        public static string Copied_Title {
+        public static string btnWindowsDefender {
             get {
-                return ResourceManager.GetString("Copied_Title", resourceCulture);
+                return ResourceManager.GetString("btnWindowsDefender", resourceCulture);
             }
         }
         
@@ -161,101 +188,124 @@ namespace IANSEO_Launcher.Properties {
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à Invalid Directory.
+        ///   Recherche une chaîne localisée semblable à IANSEO server address.
         /// </summary>
-        public static string InvalidDirectory_Title {
+        public static string lblAddressTitle {
             get {
-                return ResourceManager.GetString("InvalidDirectory_Title", resourceCulture);
+                return ResourceManager.GetString("lblAddressTitle", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à IANSEO server address.
+        ///   Recherche une chaîne localisée semblable à Please run this program as an administrator to access advanced options..
         /// </summary>
-        public static string LblAddress {
+        public static string lblAdminMessage {
             get {
-                return ResourceManager.GetString("LblAddress", resourceCulture);
+                return ResourceManager.GetString("lblAdminMessage", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Recherche une chaîne localisée semblable à Apache.
         /// </summary>
-        public static string LblApache {
+        public static string lblApache {
             get {
-                return ResourceManager.GetString("LblApache", resourceCulture);
+                return ResourceManager.GetString("lblApache", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à Service status.
+        ///   Recherche une chaîne localisée semblable à Error.
         /// </summary>
-        public static string LblEtat {
+        public static string lblError {
             get {
-                return ResourceManager.GetString("LblEtat", resourceCulture);
+                return ResourceManager.GetString("lblError", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à MySQL.
+        ///   Recherche une chaîne localisée semblable à Unable to restore.
+        ///
+        ///Backup folder &apos;backup&apos; not found in:.
         /// </summary>
-        public static string LblMySQL {
+        public static string lblErrorBackupDir {
             get {
-                return ResourceManager.GetString("LblMySQL", resourceCulture);
+                return ResourceManager.GetString("lblErrorBackupDir", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à Error during copy:.
+        ///   Recherche une chaîne localisée semblable à Error while copying the backup folder to data:.
         /// </summary>
-        public static string Msg_Error_Copy {
+        public static string lblErrorCopyBackupDir {
             get {
-                return ResourceManager.GetString("Msg_Error_Copy", resourceCulture);
+                return ResourceManager.GetString("lblErrorCopyBackupDir", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Error while copying folders from data_old:.
+        /// </summary>
+        public static string lblErrorCopyDataOldDir {
+            get {
+                return ResourceManager.GetString("lblErrorCopyDataOldDir", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Error while copying ibdata1:.
+        /// </summary>
+        public static string lblErrorCopyIbdata1 {
+            get {
+                return ResourceManager.GetString("lblErrorCopyIbdata1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Data folder not found in:.
+        /// </summary>
+        public static string lblErrorDataDir {
+            get {
+                return ResourceManager.GetString("lblErrorDataDir", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à The data_old folder cannot be found after renaming.
+        ///
+        ///Operation cancelled..
+        /// </summary>
+        public static string lblErrorDataOldDir {
+            get {
+                return ResourceManager.GetString("lblErrorDataOldDir", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Unable to delete the old data_old folder:.
+        /// </summary>
+        public static string lblErrorDelDataOldDir {
+            get {
+                return ResourceManager.GetString("lblErrorDelDataOldDir", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Recherche une chaîne localisée semblable à Error during execution:.
         /// </summary>
-        public static string Msg_Error_Execution {
+        public static string lblErrorExecution {
             get {
-                return ResourceManager.GetString("Msg_Error_Execution", resourceCulture);
+                return ResourceManager.GetString("lblErrorExecution", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à Error opening browser:.
+        ///   Recherche une chaîne localisée semblable à ibdata1 file not found in data.
+        ///Repair impossible..
         /// </summary>
-        public static string Msg_Error_OpenBrowser {
+        public static string lblErrorIbdataPath {
             get {
-                return ResourceManager.GetString("Msg_Error_OpenBrowser", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Recherche une chaîne localisée semblable à Error opening the browser:.
-        /// </summary>
-        public static string Msg_Error_OpenBrowserAlt {
-            get {
-                return ResourceManager.GetString("Msg_Error_OpenBrowserAlt", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Recherche une chaîne localisée semblable à Error opening XAMPP Control: .
-        /// </summary>
-        public static string Msg_Error_OpenXamppControl {
-            get {
-                return ResourceManager.GetString("Msg_Error_OpenXamppControl", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Recherche une chaîne localisée semblable à Error generating QR code:.
-        /// </summary>
-        public static string Msg_Error_QrGeneration {
-            get {
-                return ResourceManager.GetString("Msg_Error_QrGeneration", resourceCulture);
+                return ResourceManager.GetString("lblErrorIbdataPath", resourceCulture);
             }
         }
         
@@ -266,27 +316,304 @@ namespace IANSEO_Launcher.Properties {
         ///
         ///Please place this executable in that folder and make sure that Xampp-control.exe is also present in the same folder..
         /// </summary>
-        public static string Msg_InvalidDirectory {
+        public static string lblErrorInvalidDirectory {
             get {
-                return ResourceManager.GetString("Msg_InvalidDirectory", resourceCulture);
+                return ResourceManager.GetString("lblErrorInvalidDirectory", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Invalid Directory.
+        /// </summary>
+        public static string lblErrorInvalidDirectoryTitle {
+            get {
+                return ResourceManager.GetString("lblErrorInvalidDirectoryTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Error during copy:.
+        /// </summary>
+        public static string lblErrorLinkCopied {
+            get {
+                return ResourceManager.GetString("lblErrorLinkCopied", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à MySQL error:.
+        /// </summary>
+        public static string lblErrorMySQL {
+            get {
+                return ResourceManager.GetString("lblErrorMySQL", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à MySQL folder not found:.
+        /// </summary>
+        public static string lblErrorMysqlDir {
+            get {
+                return ResourceManager.GetString("lblErrorMysqlDir", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Error while creating the MySQL user:.
+        /// </summary>
+        public static string lblErrorMysqlUserCreation {
+            get {
+                return ResourceManager.GetString("lblErrorMysqlUserCreation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Error opening browser:.
+        /// </summary>
+        public static string lblErrorOpenBrowser {
+            get {
+                return ResourceManager.GetString("lblErrorOpenBrowser", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Error opening the browser:.
+        /// </summary>
+        public static string lblErrorOpenBrowserAlt {
+            get {
+                return ResourceManager.GetString("lblErrorOpenBrowserAlt", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Error opening XAMPP Control: .
+        /// </summary>
+        public static string lblErrorOpenXamppControl {
+            get {
+                return ResourceManager.GetString("lblErrorOpenXamppControl", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Unable to rename &apos;data&apos; to &apos;data_old&apos;:.
+        /// </summary>
+        public static string lblErrorRenameDataDir {
+            get {
+                return ResourceManager.GetString("lblErrorRenameDataDir", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Unexpected error during MySQL repair:.
+        /// </summary>
+        public static string lblErrorRepairMySQL {
+            get {
+                return ResourceManager.GetString("lblErrorRepairMySQL", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Unable to restart in administrator mode:.
+        /// </summary>
+        public static string lblErrorRunAsAdmin {
+            get {
+                return ResourceManager.GetString("lblErrorRunAsAdmin", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Error while configuring services:.
+        /// </summary>
+        public static string lblErrorSetAsService {
+            get {
+                return ResourceManager.GetString("lblErrorSetAsService", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Error generating QR code:.
+        /// </summary>
+        public static string lblErrorShowQR {
+            get {
+                return ResourceManager.GetString("lblErrorShowQR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Ianseo is running through Windows services.
+        ///
+        ///Please restart the Launcher in administrator mode to properly stop Apache and MySQL..
+        /// </summary>
+        public static string lblErrorStopNotAdministrator {
+            get {
+                return ResourceManager.GetString("lblErrorStopNotAdministrator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Error while adding exclusions:.
+        /// </summary>
+        public static string lblErrorWindowsDefenderExclusions {
+            get {
+                return ResourceManager.GetString("lblErrorWindowsDefenderExclusions", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à The file xampp-control.ini was not found..
+        /// </summary>
+        public static string lblErrorXamppIni {
+            get {
+                return ResourceManager.GetString("lblErrorXamppIni", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Error while restarting XAMPP:.
+        /// </summary>
+        public static string lblErrorXamppRestart {
+            get {
+                return ResourceManager.GetString("lblErrorXamppRestart", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Recherche une chaîne localisée semblable à Link copied to clipboard.
         /// </summary>
-        public static string Msg_LinkCopied {
+        public static string lblLinkCopied {
             get {
-                return ResourceManager.GetString("Msg_LinkCopied", resourceCulture);
+                return ResourceManager.GetString("lblLinkCopied", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Copied.
+        /// </summary>
+        public static string lblLinkCopiedTitle {
+            get {
+                return ResourceManager.GetString("lblLinkCopiedTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à MySQL.
+        /// </summary>
+        public static string lblMySQL {
+            get {
+                return ResourceManager.GetString("lblMySQL", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à The user &apos;ianseo&apos; has been recreated and privileges have been granted successfully..
+        /// </summary>
+        public static string lblMySQLRepaired {
+            get {
+                return ResourceManager.GetString("lblMySQLRepaired", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à MySQL repaired.
+        /// </summary>
+        public static string lblMySQLRepairedTitle {
+            get {
+                return ResourceManager.GetString("lblMySQLRepairedTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à 🔧 Problem solving.
+        /// </summary>
+        public static string lblRepairTitle {
+            get {
+                return ResourceManager.GetString("lblRepairTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Configuration complete: xampp-control.ini updated and Ianseo_Apache/Ianseo_MySQL services created and enabled..
+        /// </summary>
+        public static string lblSetAsService {
+            get {
+                return ResourceManager.GetString("lblSetAsService", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Services enabled.
+        /// </summary>
+        public static string lblSetAsServiceTitle {
+            get {
+                return ResourceManager.GetString("lblSetAsServiceTitle", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Recherche une chaîne localisée semblable à IANSEO QR Code.
         /// </summary>
-        public static string QrForm_Title {
+        public static string lblShowQRTitle {
             get {
-                return ResourceManager.GetString("QrForm_Title", resourceCulture);
+                return ResourceManager.GetString("lblShowQRTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Service status.
+        /// </summary>
+        public static string lblStatusTitle {
+            get {
+                return ResourceManager.GetString("lblStatusTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Warning.
+        /// </summary>
+        public static string lblWarning {
+            get {
+                return ResourceManager.GetString("lblWarning", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à ibdata1 not found in data_old.
+        ///Recovery may fail..
+        /// </summary>
+        public static string lblWarningIbdata1 {
+            get {
+                return ResourceManager.GetString("lblWarningIbdata1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à The SQL commands will need to be executed manually.
+        ///
+        ///mysql.exe not found in:.
+        /// </summary>
+        public static string lblWarningMysqlBin {
+            get {
+                return ResourceManager.GetString("lblWarningMysqlBin", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Exclusions have been added to Windows Defender.
+        ///
+        ///This will help reduce blocking issues with Apache or MySQL..
+        /// </summary>
+        public static string lblWindowsDefenderExclusions {
+            get {
+                return ResourceManager.GetString("lblWindowsDefenderExclusions", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Windows Defender exclusions.
+        /// </summary>
+        public static string lblWindowsDefenderExclusionsTitle {
+            get {
+                return ResourceManager.GetString("lblWindowsDefenderExclusionsTitle", resourceCulture);
             }
         }
     }

@@ -117,84 +117,201 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="BtnStartOpen_Run" xml:space="preserve">
+  <data name="btnStartOpen_Run" xml:space="preserve">
     <value>▶️ Iniciar IANSEO</value>
   </data>
-  <data name="BtnStop" xml:space="preserve">
+  <data name="btnStop" xml:space="preserve">
     <value>⏸️ Detener IANSEO</value>
   </data>
-  <data name="BtnShowQR" xml:space="preserve">
+  <data name="btnShowQR" xml:space="preserve">
     <value>📸 Código QR</value>
   </data>
-  <data name="LblEtat" xml:space="preserve">
+  <data name="lblStatusTitle" xml:space="preserve">
     <value>Estado de los servicios</value>
   </data>
-  <data name="LblAddress" xml:space="preserve">
+  <data name="lblAddressTitle" xml:space="preserve">
     <value>Dirección del servidor Ianseo</value>
   </data>
-  <data name="LblApache" xml:space="preserve">
+  <data name="lblApache" xml:space="preserve">
     <value>Apache</value>
   </data>
-  <data name="LblMySQL" xml:space="preserve">
+  <data name="lblMySQL" xml:space="preserve">
     <value>MySQL</value>
   </data>
-  <data name="BtnStartOpen_Open" xml:space="preserve">
+  <data name="btnStartOpen_Open" xml:space="preserve">
     <value>🌐 Abrir IANSEO</value>
   </data>
-  <data name="BtnStartOpen_Starting" xml:space="preserve">
+  <data name="btnStartOpen_Starting" xml:space="preserve">
     <value>⏳ Inicio en curso...</value>
   </data>
-  <data name="Msg_Error_OpenBrowser" xml:space="preserve">
+  <data name="lblErrorOpenBrowser" xml:space="preserve">
     <value>Error al abrir el navegador: </value>
   </data>
-  <data name="BtnStop_Stopping" xml:space="preserve">
+  <data name="btnStop_Stopping" xml:space="preserve">
     <value>⏳ Deteniendo...</value>
   </data>
-  <data name="Msg_Error_Execution" xml:space="preserve">
+  <data name="lblErrorExecution" xml:space="preserve">
     <value>Error de ejecución: </value>
   </data>
-  <data name="Msg_Error_OpenBrowserAlt" xml:space="preserve">
+  <data name="lblErrorOpenBrowserAlt" xml:space="preserve">
     <value>Error al abrir el navegador: </value>
   </data>
-  <data name="Msg_LinkCopied" xml:space="preserve">
+  <data name="lblLinkCopied" xml:space="preserve">
     <value>Enlace copiado al portapapeles</value>
   </data>
-  <data name="Msg_Error_Copy" xml:space="preserve">
+  <data name="lblErrorLinkCopied" xml:space="preserve">
     <value>Error al copiar: </value>
   </data>
-  <data name="QrForm_Title" xml:space="preserve">
+  <data name="lblShowQRTitle" xml:space="preserve">
     <value>Código QR IANSEO</value>
   </data>
-  <data name="Msg_Error_QrGeneration" xml:space="preserve">
+  <data name="lblErrorShowQR" xml:space="preserve">
     <value>Error al generar el código QR: </value>
   </data>
-  <data name="BtnCopyLink" xml:space="preserve">
+  <data name="btnCopyLink" xml:space="preserve">
     <value>🔗 Copiar</value>
   </data>
-  <data name="Copied_Title" xml:space="preserve">
+  <data name="lblLinkCopiedTitle" xml:space="preserve">
     <value>Copiado</value>
   </data>
-  <data name="Msg_Error_OpenXamppControl" xml:space="preserve">
+  <data name="lblErrorOpenXamppControl" xml:space="preserve">
     <value>Error al abrir XAMPP Control:</value>
   </data>
-  <data name="BtnOpenXamppControl" xml:space="preserve">
+  <data name="btnOpenXamppControl" xml:space="preserve">
     <value>Iniciar XAMPP Control</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="ianseo" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
-  <data name="Msg_InvalidDirectory" xml:space="preserve">
+  <data name="lblErrorInvalidDirectory" xml:space="preserve">
     <value>IANSEO.exe no está en la carpeta "ianseo\" o falta "Xampp-control.exe".
 
 Normalmente, la carpeta "ianseo\" se encuentra en "C:\" como se recomienda durante la instalación.
 
 Por favor, coloque este ejecutable en esa carpeta y asegúrese de que Xampp-control.exe también esté presente en la misma carpeta.</value>
   </data>
-  <data name="InvalidDirectory_Title" xml:space="preserve">
+  <data name="lblErrorInvalidDirectoryTitle" xml:space="preserve">
     <value>Directorio no válido</value>
   </data>
-  <data name="BtnClose" xml:space="preserve">
+  <data name="btnClose" xml:space="preserve">
     <value>Cerrar IANSEO</value>
+  </data>
+  <data name="lblRepairTitle" xml:space="preserve">
+    <value>🔧 Solución de problemas</value>
+  </data>
+  <data name="lblAdminMessage" xml:space="preserve">
+    <value>Ejecute este programa como administrador para acceder a las opciones avanzadas.</value>
+  </data>
+  <data name="btnRunAsAdmin" xml:space="preserve">
+    <value>🛡️ Abrir como administrador</value>
+  </data>
+  <data name="btnRepairMySQL" xml:space="preserve">
+    <value>🧰 Reparar MySQL</value>
+  </data>
+  <data name="btnEnableStartup" xml:space="preserve">
+    <value>🔄️ Ejecutar IANSEO en cada inicio</value>
+  </data>
+  <data name="btnWindowsDefender" xml:space="preserve">
+    <value>🛡️ Limitar problemas de Windows</value>
+  </data>
+  <data name="lblWindowsDefenderExclusionsTitle" xml:space="preserve">
+    <value>Exclusiones de Windows Defender</value>
+  </data>
+  <data name="lblWindowsDefenderExclusions" xml:space="preserve">
+    <value>Las exclusiones se han añadido a Windows Defender.
+
+Esto ayudará a reducir los bloqueos de Apache o MySQL.</value>
+  </data>
+  <data name="lblError" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="lblErrorWindowsDefenderExclusions" xml:space="preserve">
+    <value>Error al agregar las exclusiones:</value>
+  </data>
+  <data name="lblErrorRunAsAdmin" xml:space="preserve">
+    <value>No es posible reiniciar en modo administrador:</value>
+  </data>
+  <data name="lblErrorStopNotAdministrator" xml:space="preserve">
+    <value>Ianseo se está ejecutando a través de los servicios de Windows.
+
+Reinicie el Launcher en modo administrador para detener correctamente Apache y MySQL.</value>
+  </data>
+  <data name="lblErrorXamppIni" xml:space="preserve">
+    <value>No se encontró el archivo xampp-control.ini.</value>
+  </data>
+  <data name="lblSetAsServiceTitle" xml:space="preserve">
+    <value>Servicios activados</value>
+  </data>
+  <data name="lblSetAsService" xml:space="preserve">
+    <value>Configuración completada: xampp-control.ini actualizado y los servicios Ianseo_Apache/Ianseo_MySQL creados y activados.</value>
+  </data>
+  <data name="lblErrorSetAsService" xml:space="preserve">
+    <value>Error al configurar los servicios:</value>
+  </data>
+  <data name="lblErrorMysqlDir" xml:space="preserve">
+    <value>Carpeta MySQL no encontrada:</value>
+  </data>
+  <data name="lblErrorDataDir" xml:space="preserve">
+    <value>Carpeta data no encontrada en:</value>
+  </data>
+  <data name="lblErrorBackupDir" xml:space="preserve">
+    <value>No es posible restaurar.
+
+La carpeta de respaldo 'backup' no se encontró en:</value>
+  </data>
+  <data name="lblErrorIbdataPath" xml:space="preserve">
+    <value>El archivo ibdata1 no se encontró en data.
+Reparación imposible.</value>
+  </data>
+  <data name="lblErrorDelDataOldDir" xml:space="preserve">
+    <value>No se puede eliminar la carpeta antigua data_old:</value>
+  </data>
+  <data name="lblErrorRenameDataDir" xml:space="preserve">
+    <value>No se puede renombrar 'data' a 'data_old':</value>
+  </data>
+  <data name="lblErrorCopyBackupDir" xml:space="preserve">
+    <value>Error al copiar la carpeta backup a data:</value>
+  </data>
+  <data name="lblErrorDataOldDir" xml:space="preserve">
+    <value>La carpeta data_old no se encuentra después del cambio de nombre.
+
+Operación cancelada.</value>
+  </data>
+  <data name="lblErrorCopyDataOldDir" xml:space="preserve">
+    <value>Error al copiar carpetas desde data_old:</value>
+  </data>
+  <data name="lblErrorCopyIbdata1" xml:space="preserve">
+    <value>Error al copiar ibdata1:</value>
+  </data>
+  <data name="lblWarning" xml:space="preserve">
+    <value>Atención</value>
+  </data>
+  <data name="lblWarningIbdata1" xml:space="preserve">
+    <value>ibdata1 no se encontró en data_old.
+La recuperación puede fallar.</value>
+  </data>
+  <data name="lblErrorXamppRestart" xml:space="preserve">
+    <value>Error al reiniciar XAMPP:</value>
+  </data>
+  <data name="lblErrorMySQL" xml:space="preserve">
+    <value>Error de MySQL:</value>
+  </data>
+  <data name="lblMySQLRepaired" xml:space="preserve">
+    <value>El usuario 'ianseo' ha sido recreado y los privilegios se han otorgado correctamente.</value>
+  </data>
+  <data name="lblMySQLRepairedTitle" xml:space="preserve">
+    <value>MySQL reparado</value>
+  </data>
+  <data name="lblWarningMysqlBin" xml:space="preserve">
+    <value>Los comandos SQL deberán ejecutarse manualmente.
+
+mysql.exe no encontrado en:</value>
+  </data>
+  <data name="lblErrorMysqlUserCreation" xml:space="preserve">
+    <value>Error al crear el usuario de MySQL:</value>
+  </data>
+  <data name="lblErrorRepairMySQL" xml:space="preserve">
+    <value>Error inesperado durante la reparación de MySQL:</value>
   </data>
 </root>
