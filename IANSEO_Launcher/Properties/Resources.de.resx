@@ -314,4 +314,10 @@ mysql.exe nicht gefunden in:</value>
   <data name="lblErrorRepairMySQL" xml:space="preserve">
     <value>Unerwarteter Fehler bei der MySQL-Reparatur:</value>
   </data>
+  <data name="lblErrorDeleteApacheService" xml:space="preserve">
+    <value>Der Apache-Dienst kann nicht entfernt werden. Schließen Sie alle Apache-Prozesse und versuchen Sie es erneut.</value>
+  </data>
+  <data name="lblErrorDeleteMySQLService" xml:space="preserve">
+    <value>Der MySQL-Dienst kann nicht entfernt werden. Schließen Sie alle MySQL-Prozesse und versuchen Sie es erneut.</value>
+  </data>
 </root>

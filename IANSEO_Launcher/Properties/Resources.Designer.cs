@@ -291,6 +291,24 @@ namespace IANSEO_Launcher.Properties {
         }
         
         /// <summary>
+        ///   Recherche une chaîne localisée semblable à The Apache service cannot be removed. Close all Apache processes and try again..
+        /// </summary>
+        public static string lblErrorDeleteApacheService {
+            get {
+                return ResourceManager.GetString("lblErrorDeleteApacheService", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à The MySQL service cannot be removed. Close all MySQL processes and try again..
+        /// </summary>
+        public static string lblErrorDeleteMySQLService {
+            get {
+                return ResourceManager.GetString("lblErrorDeleteMySQLService", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Recherche une chaîne localisée semblable à Error during execution:.
         /// </summary>
         public static string lblErrorExecution {

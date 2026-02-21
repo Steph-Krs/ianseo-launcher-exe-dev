@@ -62,7 +62,7 @@ namespace IANSEO_Launcher
         // Apply the current user interface culture > language
         CultureInfo culture = Thread.CurrentThread.CurrentUICulture;
         // Optional: comment the previous line and uncomment the following line to force the language. Available: en, fr, de, es, it
-        //CultureInfo culture = new CultureInfo("it");
+        //CultureInfo culture = new CultureInfo("fr");
 
         private string apacheServiceName; // Name of the Windows service created for Apache
         private string mysqlServiceName; // Name of the Windows service created for MySQL
@@ -795,7 +795,7 @@ namespace IANSEO_Launcher
                 process.StartInfo.CreateNoWindow = true;
                 process.Start();
                 await Task.Run(() => process.WaitForExit());
-                await FinishProgressBar();
+                
             }
             catch (Exception ex)
             {
@@ -806,6 +806,7 @@ namespace IANSEO_Launcher
                     MessageBoxIcon.Error
                 );
             }
+            await FinishProgressBar();
         }
         private void CopyDirectory(string sourceDir, string destDir) // Copy all files and subdirectories from sourceDir to destDir (merge, overwrite existing files)
         {
@@ -874,7 +875,7 @@ namespace IANSEO_Launcher
             bool mysqlExists = await ServiceExists(mysqlServiceName);
             bool apacheServiceRunning = apacheExists && await IsServiceRunning(apacheServiceName);
             bool mysqlServiceRunning = mysqlExists && await IsServiceRunning(mysqlServiceName);
-            if (apacheServiceRunning || mysqlServiceRunning) // If at least one service is running → we must stop via sc.exe with admin rights
+            if (apacheServiceRunning || mysqlServiceRunning) // If at least one service is running → we must stop via sc.exe with admin rights and delete services to clean up
             {
                 if (!IsAdministrator())
                 {
@@ -885,19 +886,74 @@ namespace IANSEO_Launcher
                         MessageBoxIcon.Error
                     );
                     UpdateUIByServiceStatus();
+                    StopProgressBarSafe();
                     return;
                 }
                 else
+                StartProgressBar();
                 {
                     if (apacheServiceRunning)
+                    {
                         await RunCommandAsync("sc.exe", $"stop \"{apacheServiceName}\"");
+                        await Task.Delay(1000);
+                        await RunCommandAsync("sc.exe", $"delete \"{apacheServiceName}\"");
+                        int maxRetries = 10;
+                        for (int i = 0; i < maxRetries; i++) // Check every second if the service still exists for 10 seconds
+                        {
+                            await Task.Delay(1000);
+                            bool stillExists = await ServiceExists(apacheServiceName);
+                            if (!stillExists)
+                                break;
+
+                            if (i == maxRetries - 1)
+                            {
+                                MessageBox.Show(
+                                    rm.GetString("lblErrorDeleteApacheService", culture),
+                                    rm.GetString("lblError", culture),
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Error
+                                );
+                                StopProgressBarSafe();
+                                return;
+                            }
+                        }
+                    }
 
                     if (mysqlServiceRunning)
+                    {
                         await RunCommandAsync("sc.exe", $"stop \"{mysqlServiceName}\"");
-                }
+                        await Task.Delay(1000);
+                        await RunCommandAsync("sc.exe", $"delete \"{mysqlServiceName}\"");
+                        int maxRetries = 10;
+                        for (int i = 0; i < maxRetries; i++) // Check every second if the service still exists for 10 seconds
+                        {
+                            await Task.Delay(1000);
+                            bool stillExists = await ServiceExists(mysqlServiceName);
+                            if (!stillExists)
+                                break;
 
+                            if (i == maxRetries - 1)
+                            {
+                                MessageBox.Show(
+                                    rm.GetString("lblErrorDeleteMySQLService", culture),
+                                    rm.GetString("lblError", culture),
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Error
+                                );
+                                StopProgressBarSafe();
+                                return;
+                            }
+                        }
+                    }
+                }
             }
-            await RunProcessAndWait(xamppStopPath); // Always run xampp_stop.exe to ensure proper shutdown
+            bool apacheRunning = Process.GetProcessesByName("httpd").Any();
+            bool mysqlRunning = Process.GetProcessesByName("mysqld").Any();
+            if (apacheRunning || mysqlRunning)
+            {
+                await RunProcessAndWait(xamppStopPath); // Always run xampp_stop.exe to ensure proper shutdown
+            }
+            StopProgressBarSafe();
         }
         private void BtnCopyLink_Click(object sender, EventArgs e) // Copy Ianseo address to clipboard
         {
@@ -1327,25 +1383,65 @@ namespace IANSEO_Launcher
                     if (apacheExists)
                     {
                         await RunCommandAsync("sc.exe", $"stop \"{apacheServiceName}\"");
+                        await Task.Delay(500);
                         await RunCommandAsync("sc.exe", $"delete \"{apacheServiceName}\"");
-                        await Task.Delay(1000);
+                        int maxRetries = 10;
+                        for (int i = 0; i < maxRetries; i++) // Check every second if the service still exists for 10 seconds
+                        {
+                            await Task.Delay(1000);
+                            bool stillExists = await ServiceExists(apacheServiceName);
+                            if (!stillExists)
+                                break;
+
+                            if (i == maxRetries - 1)
+                            {
+                                MessageBox.Show(
+                                    rm.GetString("lblErrorDeleteApacheService", culture),
+                                    rm.GetString("lblError", culture),
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Error
+                                );
+                                StopProgressBarSafe();
+                                return;
+                            }
+                        }
                     }
                     string createCmd = $"create \"{apacheServiceName}\" binPath= \"{apacheBin} -k runservice\" start= auto";
-                    await RunCommandAsync("sc.exe", createCmd);
+                    var result = await RunCommandAsync("sc.exe", createCmd);
                 }
 
-                if (!string.IsNullOrEmpty(mysqlBin) && File.Exists(mysqlBin)) // Remove the MySQL service if it exists and create the Apache service
+                if (!string.IsNullOrEmpty(mysqlBin) && File.Exists(mysqlBin)) // Remove the MySQL service if it exists and create the MySQL service
                 {
                     bool mysqlExists = await ServiceExists(mysqlServiceName);
                     if (mysqlExists)
                     {
                         await RunCommandAsync("sc.exe", $"stop \"{mysqlServiceName}\"");
+                        await Task.Delay(500);
                         await RunCommandAsync("sc.exe", $"delete \"{mysqlServiceName}\"");
-                        await Task.Delay(1000);
+                        int maxRetries = 10;
+                        for (int i = 0; i < maxRetries; i++) // Check every second if the service still exists for 10 seconds
+                        {
+                            await Task.Delay(1000);
+                            bool stillExists = await ServiceExists(mysqlServiceName);
+                            if (!stillExists)
+                                break;
+
+                            if (i == maxRetries - 1)
+                            {
+                                MessageBox.Show(
+                                    rm.GetString("lblErrorDeleteMySQLService", culture),
+                                    rm.GetString("lblError", culture),
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Error
+                                );
+                                StopProgressBarSafe();
+                                return;
+                            }
+                        }
                     }
 
                     string myIni = Path.Combine(basePath, "mysql", "bin", "my.ini");
-                    await RunCommandAsync(mysqlBin, $"--install Ianseo_MySQL --defaults-file=\"{myIni}\"");
+                    await RunCommandAsync(mysqlBin, $"--install \"{mysqlServiceName}\" --defaults-file=\"{myIni}\"");
                 }
                 await Task.Delay(1000);
                 await RunCommandAsync("net.exe", $"start \"{apacheServiceName}\""); // Start the services
@@ -1371,6 +1467,7 @@ namespace IANSEO_Launcher
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Error
                 );
+                StopProgressBarSafe();
             }
         }
         private void BtnWindowsDefender_Click(object sender, EventArgs e) // Add exclusions to Windows Defender via PowerShell
@@ -1415,6 +1512,12 @@ namespace IANSEO_Launcher
         //* Progress Bar Management *//
         private void StartProgressBar() // Launch a fake progress bar to reassure the user and keep them waiting
         {
+            btnStop.Enabled = false;
+            btnRunAsAdmin.Enabled = false;
+            btnRepairMySQL.Enabled = false;
+            btnEnableStartup.Enabled = false;
+            btnWindowsDefender.Enabled = false;
+
             isProgressRunning = true;
             progressBar.Progress = 0;
             progressBar.Visible = true;
@@ -1442,6 +1545,12 @@ namespace IANSEO_Launcher
                 progressTimer.Dispose();
                 progressTimer = null;
             }
+
+            btnStop.Enabled = true;
+            btnRunAsAdmin.Enabled = true;
+            btnRepairMySQL.Enabled = true;
+            btnEnableStartup.Enabled = true;
+            btnWindowsDefender.Enabled = true;
         }
         public void StopProgressBarSafe() // Thread-safe stop progress bar
         {
@@ -1464,6 +1573,12 @@ namespace IANSEO_Launcher
                 progressBar.Progress = current + (target - current) * i / steps;
                 await Task.Delay(delay);
             }
+
+            btnStop.Enabled = true;
+            btnRunAsAdmin.Enabled = true;
+            btnRepairMySQL.Enabled = true;
+            btnEnableStartup.Enabled = true;
+            btnWindowsDefender.Enabled = true;
         }
         private Random rnd = new Random();
         private void ProgressTimer_Tick(object sender, EventArgs e) // Timer tick to update progress bar
